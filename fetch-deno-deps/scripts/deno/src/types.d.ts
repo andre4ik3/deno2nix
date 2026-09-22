@@ -104,6 +104,7 @@ export type NpmPackages = {
     optionalDependencies: Array<PackageSpecifierString>;
     bin?: boolean;
     scripts?: boolean;
+    tarball?: string;
   };
 };
 export type JsrPackages = {

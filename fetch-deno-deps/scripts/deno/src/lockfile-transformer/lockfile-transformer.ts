@@ -144,7 +144,7 @@ function makeNpmCommonLock(denolock: DenoLock): CommonLockFormatIn {
     const packageSpecifier = parsePackageSpecifier(key);
     const registry = "npm";
     packageSpecifier.registry = registry;
-    const url = makeNpmPackageUrl(packageSpecifier);
+    const url = value.tarball ?? makeNpmPackageUrl(packageSpecifier);
     const hash: Hash = {
       string: value.integrity,
       algorithm: "sha512",
